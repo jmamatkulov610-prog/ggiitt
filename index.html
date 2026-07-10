@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+
+    <div class="container nav">
+
+        <div class="left">
+
+            <div class="logo">
+
+                <img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8bca1f6f0c6c4e95dd7fdf75f1a4bb7a8a798edc2cc74e07bcb35c50a761e3f8.svg">
+
+            </div>
+
+           <ul>
+
+    <li class="dropdown">
+
+        Фильмы
+
+        <ul class="dropdown-menu">
+
+            <li>Popular</li>
+            <li>Now Playing</li>
+            <li>Upcoming</li>
+            <li>Top Rated</li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        Сериалы
+
+        <ul class="dropdown-menu">
+
+            <li>Popular</li>
+            <li>Airing Today</li>
+            <li>On TV</li>
+            <li>Top Rated</li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        Люди
+
+        <ul class="dropdown-menu">
+
+            <li>Popular People</li>
+
+        </ul>
+
+    </li>
+
+    <li class="dropdown">
+
+        Awards
+
+        <ul class="dropdown-menu">
+
+            <li>Discussions</li>
+            <li>Leaderboard</li>
+            <li>Support</li>
+            <li>API</li>
+
+        </ul>
+
+    </li>
+
+</ul>
+
+        </div>
+
+        <div class="right">
+
+            <i class="fa-solid fa-plus"></i>
+
+            <button>EN</button>
+
+            <a href="">Login</a>
+
+            <a href="">Join TMDB</a>
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <section class="hero">
+
+        <div class="overlay">
+
+            <div class="container">
+
+                <h1>Welcome.</h1>
+
+                <h2>
+                    Millions of movies, TV shows and people to discover.
+                    Explore now.
+                </h2>
+
+                <div class="search">
+
+                    <input
+                     id="searchInput"
+                     type="text"
+                     placeholder="Search for a movie, tv show, person...">
+
+                     <button id="searchBtn">
+
+                         Search
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="trending">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>Trending</h2>
+
+                <div class="switch">
+
+                    <button class="active">
+
+                        Today
+
+                    </button>
+
+                    <button>
+
+                        This Week
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="cards" id="trending">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="popular">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>What's Popular</h2>
+
+                <div class="switch">
+
+                    <button class="active">
+                        Streaming
+                    </button>
+
+                    <button>On TV</button>
+
+                    <button>For Rent</button>
+
+                    <button>In Theaters</button>
+
+                </div>
+
+            </div>
+
+            <div class="cards" id="popular">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="topRated">
+
+        <div class="container">
+
+            <div class="title">
+
+                <h2>Top Rated</h2>
+
+            </div>
+
+            <div class="cards" id="topRated">
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="join">
+
+    <div class="container joinBox">
+
+        <div class="left">
+
+            <h2>Join Today</h2>
+
+            <p>
+                Get access to maintain your own <i>custom personal lists</i>,
+                track what you've seen and search and filter for what to watch next—
+                regardless if it's in theatres or on TV.
+            </p>
+
+            <button>Sign Up</button>
+
+        </div>
+
+        <div class="right">
+
+            <ul>
+
+                <li>Maintain a personal watchlist</li>
+
+                <li>Filter by your subscribed streaming services</li>
+
+                <li>Log the movies and TV shows you've seen</li>
+
+                <li>Build custom lists</li>
+
+                <li>Contribute to and improve our database</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="leaderboard">
+
+    <div class="container">
+
+        <h2>Leaderboard</h2>
+
+        <div class="leaders" id="leaders"></div>
+
+    </div>
+
+</section>
+
+
+    <script src="api.js"></script>
+
+    <script src="app.js"></script>
+
+    <footer>
+
+    <div class="container footer">
+
+        <div class="footerLogo">
+
+            <h1>TMDB</h1>
+
+            <button>JOIN THE COMMUNITY</button>
+
+        </div>
+
+        <div class="footerLinks">
+
+            <div>
+
+                <h3>THE BASICS</h3>
+
+                <a href="">About TMDB</a>
+                <a href="">Contact Us</a>
+                <a href="">Support Forums</a>
+                <a href="">API</a>
+                <a href="">System Status</a>
+
+            </div>
+
+            <div>
+
+                <h3>GET INVOLVED</h3>
+
+                <a href="">Contribution Bible</a>
+                <a href="">Add New Movie</a>
+                <a href="">Add New TV Show</a>
+
+            </div>
+
+            <div>
+
+                <h3>COMMUNITY</h3>
+
+                <a href="">Guidelines</a>
+                <a href="">Discussions</a>
+                <a href="">Leaderboard</a>
+
+            </div>
+
+            <div>
+
+                <h3>LEGAL</h3>
+
+                <a href="">Terms of Use</a>
+                <a href="">API Terms</a>
+                <a href="">Privacy Policy</a>
+                <a href="">DMCA</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>
